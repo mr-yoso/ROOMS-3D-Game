@@ -15,7 +15,7 @@ E:/Documents/GitHub/ROOMS-3D-Game/ROOMS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59483
+55159
 Successfully changed project path to: E:/Documents/GitHub/ROOMS-3D-Game/ROOMS
 E:/Documents/GitHub/ROOMS-3D-Game/ROOMS
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/Documents/GitHub/ROOMS-3D-Game/ROOMS
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [36736] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 3681667975 [EditorId] 3681667975 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8L7O93G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [48448] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 587822557 [EditorId] 587822557 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8L7O93G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [36736] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 3681667975 [EditorId] 3681667975 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8L7O93G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [48448] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 587822557 [EditorId] 587822557 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8L7O93G) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-Refreshing native plugins compatible for Editor in 5.00 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.32f1 (c8300dc0a3fa)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004337 seconds.
-- Loaded All Assemblies, in  0.263 seconds
+Registered in 0.008268 seconds.
+- Loaded All Assemblies, in  0.345 seconds
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.220 seconds
-Domain Reload Profiling: 482ms
-	BeginReloadAssembly (82ms)
+- Finished resetting the current domain, in  0.274 seconds
+Domain Reload Profiling: 617ms
+	BeginReloadAssembly (112ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (97ms)
-		LoadAssemblies (81ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (130ms)
+		LoadAssemblies (109ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (96ms)
-			TypeCache.Refresh (94ms)
-				TypeCache.ScanAssembly (85ms)
+		AnalyzeDomain (129ms)
+			TypeCache.Refresh (127ms)
+				TypeCache.ScanAssembly (114ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (220ms)
+	FinalizeReload (274ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (177ms)
+		SetupLoadedEditorAssemblies (220ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (118ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +117,110 @@ Domain Reload Profiling: 482ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.437 seconds
-Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
+Symbol file data-000002AD0188C010 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01729E40 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD017D0020 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00F9A4F0 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01729E40 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00D77560 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01811430 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01811430 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD0134C420 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01811430 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01811430 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01364C30 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD026ED830 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00F810C0 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD015F2C10 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00DB9380 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01386640 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01D8B010 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00DB9380 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD00DB9380 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01D8B010 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AEBCC63230 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD016C5250 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD016C5250 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD020F3030 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD01DC2620 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002AD020F3030 doesn't match image E:\Documents\GitHub\ROOMS-3D-Game\ROOMS\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.577 seconds
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.602 seconds
-Domain Reload Profiling: 1038ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  0.760 seconds
+Domain Reload Profiling: 1335ms
+	BeginReloadAssembly (136ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (20ms)
+		CreateAndSetChildDomain (21ms)
 	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (254ms)
-		LoadAssemblies (194ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (330ms)
+		LoadAssemblies (244ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (125ms)
-			TypeCache.Refresh (111ms)
-				TypeCache.ScanAssembly (100ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (603ms)
+		AnalyzeDomain (164ms)
+			TypeCache.Refresh (146ms)
+				TypeCache.ScanAssembly (132ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (760ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (495ms)
+		SetupLoadedEditorAssemblies (625ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (422ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (536ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 3.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3094 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (57.7 KB). Loaded Objects now: 3554.
-Memory consumption went from 119.2 MB to 119.1 MB.
-Total: 4.611500 ms (FindLiveObjects: 0.380400 ms CreateObjectMapping: 0.200200 ms MarkObjects: 3.911300 ms  DeleteObjects: 0.118800 ms)
+Unloading 33 unused Assets / (57.6 KB). Loaded Objects now: 3554.
+Memory consumption went from 119.3 MB to 119.2 MB.
+Total: 4.201400 ms (FindLiveObjects: 0.326800 ms CreateObjectMapping: 0.149800 ms MarkObjects: 3.620000 ms  DeleteObjects: 0.104000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -181,10 +238,139 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2599172.406959 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'ae5280ad91af67e2a353905758f96678') in 0.002944 seconds
+  Time since last request: 1658534.392883 seconds.
+  path: Assets/Ch44_nonPBR.fbx
+  artifactKey: Guid(c7870beedca116a4fa42644f8ac7f479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbx using Guid(c7870beedca116a4fa42644f8ac7f479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'abb707936e8619ce74f1a69f788af15b') in 0.158298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 53.552070 seconds.
+  path: Assets/Player.fbx
+  artifactKey: Guid(c7870beedca116a4fa42644f8ac7f479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbx using Guid(c7870beedca116a4fa42644f8ac7f479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c8b221407578fc3e4251f6a722eac821') in 0.030582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 147
+========================================================================
+Received Import Request.
+  Time since last request: 4900.947271 seconds.
+  path: Assets/Ch44_nonPBR.fbm
+  artifactKey: Guid(23664d4ef8cd68547b74e1770783455a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm using Guid(23664d4ef8cd68547b74e1770783455a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4dd7c5d49398abe2870403c447f819d6') in 0.005749 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.047807 seconds.
+  path: Assets/Ch44_nonPBR.fbm/Ch44_1001_Diffuse.png
+  artifactKey: Guid(ace7e90607f11b44cbe51dafc6fc1eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm/Ch44_1001_Diffuse.png using Guid(ace7e90607f11b44cbe51dafc6fc1eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e19e1d73d866f74a87820a70be3435fd') in 0.103519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Ch44_nonPBR.fbm/Ch44_1001_Specular.png
+  artifactKey: Guid(aa20e025a77232e479f1a060ef81a8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm/Ch44_1001_Specular.png using Guid(aa20e025a77232e479f1a060ef81a8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f586c3f4c05d67a4fdafe0f5576b40f5') in 0.010207 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Ch44_nonPBR.fbm/Ch44_1002_Emissive.png
+  artifactKey: Guid(d6f0a4a6b33d2e04c92706e4c85c99fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm/Ch44_1002_Emissive.png using Guid(d6f0a4a6b33d2e04c92706e4c85c99fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ab8e0776707c9c490f99bf636a08ac4c') in 0.022435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Ch44_nonPBR.fbm/Ch44_1002_Glossiness.png
+  artifactKey: Guid(6912306988e1dad4d8fb234e3ca16e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm/Ch44_1002_Glossiness.png using Guid(6912306988e1dad4d8fb234e3ca16e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c57383f3ac617fe723e45246c3c11a6d') in 0.011413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Ch44_nonPBR.fbm/Ch44_1001_Normal.png
+  artifactKey: Guid(613875c2387b8d040b06efe485ec9fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ch44_nonPBR.fbm/Ch44_1001_Normal.png using Guid(613875c2387b8d040b06efe485ec9fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '509b4017d7eca2369997f6d408c48d9b') in 0.029296 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.702077 seconds.
+  path: Assets/Player.fbm/Ch44_1001_Emissive.png
+  artifactKey: Guid(22f9b0e00c3e162489a90280f924285c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbm/Ch44_1001_Emissive.png using Guid(22f9b0e00c3e162489a90280f924285c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '695276055e807563139ed23d8b34c2e6') in 0.006658 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Player.fbm/Ch44_1002_Emissive.png
+  artifactKey: Guid(e27d736fbea7da74788f7b26cf7c07e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbm/Ch44_1002_Emissive.png using Guid(e27d736fbea7da74788f7b26cf7c07e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'cd550ad03478d102a0b40cc8a9a926aa') in 0.004799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Player.fbm/Ch44_1002_Specular.png
+  artifactKey: Guid(956a2d6a8972eef4ca13c13367645c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbm/Ch44_1002_Specular.png using Guid(956a2d6a8972eef4ca13c13367645c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '596ddf348b014e5d8737de6bf4775678') in 0.010388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Player.fbm/Ch44_1002_Diffuse.png
+  artifactKey: Guid(e5802e7c13044174b9facde153d0dcfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbm/Ch44_1002_Diffuse.png using Guid(e5802e7c13044174b9facde153d0dcfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f59b7a58293bcb2f2158fb9d061a45c8') in 0.010775 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Player.fbm/Ch44_1001_Specular.png
+  artifactKey: Guid(d100b762ddeb578409753789f06f41dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.fbm/Ch44_1001_Specular.png using Guid(d100b762ddeb578409753789f06f41dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd25bff313c41f950ba4cac001917b673') in 0.005945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
