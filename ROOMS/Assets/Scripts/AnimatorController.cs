@@ -6,13 +6,13 @@ using UnityEngine;
 public class AnimatorController : MonoBehaviour
 {
     Animator animator;
-    PlayerMovement movement;
+    PlayerController movement;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        movement = GetComponent<PlayerMovement>();
+        movement = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
