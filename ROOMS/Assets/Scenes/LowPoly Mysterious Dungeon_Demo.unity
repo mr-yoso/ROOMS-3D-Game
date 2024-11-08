@@ -31001,6 +31001,8 @@ MonoBehaviour:
   mouseSensitivity: 500
   topClamp: -90
   bottomClamp: 90
+  body: {fileID: 31981680}
+  arm: {fileID: 2115861987}
 --- !u!81 &787842178
 AudioListener:
   m_ObjectHideFlags: 0
@@ -82215,12 +82217,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32deaa1c6c5f75b4892e0d589fea3490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 2003011455}
-  speed: 5
-  gravity: -9.81
+  walkSpeed: 5
+  runSpeed: 8
+  isRunning: 0
   jumpHeight: 3
-  groundCheck: {fileID: 1218956844}
+  controller: {fileID: 2003011455}
+  gravity: -9.81
   groundDistance: 0.4
+  isGrounded: 0
+  groundCheck: {fileID: 1218956844}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
