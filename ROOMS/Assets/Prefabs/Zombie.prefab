@@ -1436,10 +1436,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1780009439091515313}
+  - component: {fileID: 1369400940246540825}
+  - component: {fileID: 3646824479121587793}
+  - component: {fileID: 6886063299716492311}
+  - component: {fileID: 199998814321402083}
+  - component: {fileID: 8457429245998648767}
+  - component: {fileID: 3927468853613716822}
+  - component: {fileID: 6013008226209618948}
   m_Layer: 0
-  m_Name: mixamorig5:RightHandMiddle3
-  m_TagString: Untagged
+  m_Name: Zombie
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2073,8 +2079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a985b6342e7f4394f46aa6caa38b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 7637504755482136265}
-  player: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
+  agent: {fileID: 6886063299716492311}
+  player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -2090,13 +2096,13 @@ MonoBehaviour:
   attackRange: 3
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!136 &1447563821519822006
+--- !u!136 &6013008226209618948
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967145656953935902}
+  m_GameObject: {fileID: 4838261178445869176}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2113,7 +2119,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &8020730111072946303
+--- !u!1 &5110555907783635448
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

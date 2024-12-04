@@ -89,6 +89,16 @@ public class AIController : MonoBehaviour
         {
             ///Attack code here
             ///
+            // GameObject projectileGO = Instantiate(projectile, transform.position, Quaternion.identity);
+            // Rigidbody rb = projectileGO.GetComponent<Rigidbody>();
+            // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            // Destroy(projectileGO, 3f);
+            PlayerStatus playerStatus = player.GetComponent<PlayerStatus>();
+            if (playerStatus != null)
+            {
+                playerStatus.TakeDamage(10); // Deal 10 damage to the player
+            }
             ///End of attack code
 
             alreadyAttacked = true;
