@@ -17,6 +17,4 @@ public class PlayerStatus : CharacterStatus
         base.CheckHealth();
         hud.UpdateHealth(health, maxHealth);
     }
-
-
 }

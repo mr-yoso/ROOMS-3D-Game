@@ -1371,34 +1371,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4223977471163964070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4838261178445869176, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
-  m_PrefabInstance: {fileID: 4557490926430435734}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &4223977471163964077
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4223977471163964070}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &4280113179851273695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1516,21 +1488,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 893274759}
+    - target: {fileID: 3927468853613716822, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4838261178445869176, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
-    - target: {fileID: 4838261178445869176, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4838261178445869176, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4223977471163964077}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 145b0826925bb40428dbd5313cb5cf42, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
