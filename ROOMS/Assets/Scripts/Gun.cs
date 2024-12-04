@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public GameObject impactEffectBlood;
 
 
     private float nextTimeToFire = 0f;
@@ -31,13 +32,27 @@ public class Gun : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             Target target = hit.transform.GetComponent<Target>();
+            AIController ai = hit.transform.GetComponent<AIController>();
             if (target != null)
             {
                 target.TakeDamage(damage);
             }
+            if (ai != null)
+            {
+                ai.TakeDamage(damage);
+            }
 
-            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                GameObject impactBloodGO = Instantiate(impactEffectBlood, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactBloodGO, 0.5f);
+            }
+            else
+            {
+                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGO, 2f);
+            }
+
             // Enemy enemy = hit.transform.GetComponent<Enemy>();
             // if (enemy != null)
             // {
