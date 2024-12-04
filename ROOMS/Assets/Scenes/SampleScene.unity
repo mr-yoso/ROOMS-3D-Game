@@ -553,8 +553,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9056604, g: 0.881813, b: 0.8159487, a: 1}
-      maxColor: {r: 0, g: 0, b: 0, a: 1}
+      minColor: {r: 1, g: 0.83594924, b: 0.3820755, a: 1}
+      maxColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.63271844, b: 0.2783019, a: 1}
@@ -5565,7 +5565,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 8.4e-44, z: 8.499e-42, w: 0}
+  m_BoundingSphereOverride: {x: 1.6218805, y: 0, z: 0, w: 0.33333334}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7065,6 +7065,7 @@ MonoBehaviour:
   range: 100
   fpsCamera: {fileID: 1708375761}
   muzzleFlash: {fileID: 305001556}
+  impactEffect: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd, type: 3}
 --- !u!4 &169056768725644454
 Transform:
   m_ObjectHideFlags: 0
