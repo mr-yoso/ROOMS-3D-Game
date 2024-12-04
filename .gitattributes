@@ -1,1 +1,2 @@
 /ROOMS/*.unity filter=lfs diff=lfs merge=lfs -text
+/ROOMS/*.fbx filter=lfs diff=lfs merge=lfs -text
