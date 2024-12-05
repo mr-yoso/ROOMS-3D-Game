@@ -21,7 +21,6 @@ public class AIController : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    public GameObject projectile;
 
     //States
     public float sightRange, attackRange;
@@ -124,10 +123,21 @@ public class AIController : MonoBehaviour
             Invoke(nameof(DestroyEnemy), 0.5f);
         }
     }
+
     private void DestroyEnemy()
     {
+        if (ObjectiveManager.Instance != null)
+        {
+            ObjectiveManager.Instance.ZombieKilled();
+        }
+        else
+        {
+            Debug.LogError("ObjectiveManager instance not found.");
+        }
+
         Destroy(gameObject);
     }
+
 
     private void OnDrawGizmosSelected()
     {

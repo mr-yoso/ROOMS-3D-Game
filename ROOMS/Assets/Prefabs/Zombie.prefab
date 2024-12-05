@@ -2141,11 +2141,11 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 2.5
-  projectile: {fileID: 924797098891081251, guid: fc68ff2084c11e347a7d8df5551a37c6, type: 3}
   sightRange: 8
   attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
+  objectiveManager: {fileID: 658662701672689529, guid: 1cf3364a964e9e745a59554b20c7a9d7, type: 3}
 --- !u!136 &-1261298234137396540
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -389,9 +389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21aabc8df65e5a24d8180dc4e6b9e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
   range: 100
-  fireRate: 15
+  fireRate: 8
   fpsCamera: {fileID: 6080136169065267072}
   muzzleFlash: {fileID: 7352127974049386357}
   impactEffect: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd, type: 3}

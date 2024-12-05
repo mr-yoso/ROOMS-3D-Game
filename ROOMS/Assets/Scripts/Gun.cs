@@ -4,7 +4,7 @@ public class Gun : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
-    public float fireRate = 15f;
+    public float fireRate = 7f;
 
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
