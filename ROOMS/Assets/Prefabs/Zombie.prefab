@@ -2143,7 +2143,7 @@ MonoBehaviour:
   timeBetweenAttacks: 2.5
   projectile: {fileID: 924797098891081251, guid: fc68ff2084c11e347a7d8df5551a37c6, type: 3}
   sightRange: 8
-  attackRange: 1.5
+  attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!136 &-1261298234137396540
@@ -2165,10 +2165,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
-  m_Height: 2
+  m_Radius: 0.2
+  m_Height: 1.8
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &8177134440761602918
 GameObject:
   m_ObjectHideFlags: 0
