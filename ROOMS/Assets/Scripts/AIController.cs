@@ -25,11 +25,13 @@ public class AIController : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    AudioManager audioManager;
 
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -87,12 +89,7 @@ public class AIController : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            ///
-            // GameObject projectileGO = Instantiate(projectile, transform.position, Quaternion.identity);
-            // Rigidbody rb = projectileGO.GetComponent<Rigidbody>();
-            // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            // Destroy(projectileGO, 3f);
+            audioManager.PlaySFX(audioManager.attack);
             ZombieAnimController animController = GetComponent<ZombieAnimController>();
             if (animController != null)
             {

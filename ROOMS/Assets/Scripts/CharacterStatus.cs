@@ -9,6 +9,12 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] protected int maxHealth;
 
     [SerializeField] protected bool isDead;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -44,6 +50,7 @@ public class CharacterStatus : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audioManager.PlaySFX(audioManager.grunt);
         int healthAfterDamage = health - damage;
         SetHealthTo(healthAfterDamage);
     }

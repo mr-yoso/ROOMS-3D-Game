@@ -13,6 +13,13 @@ public class Gun : MonoBehaviour
 
 
     private float nextTimeToFire = 0f;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
@@ -25,6 +32,7 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         muzzleFlash.Play();
+        audioManager.PlaySFX(audioManager.gunshot);
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))

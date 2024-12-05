@@ -469,6 +469,10 @@ PrefabInstance:
       value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4824188022938943945, guid: 839d4b309832a5d4a834d5e46519ac28, type: 3}
+      propertyPath: sightRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824188022938943945, guid: 839d4b309832a5d4a834d5e46519ac28, type: 3}
       propertyPath: attackRange
       value: 2
       objectReference: {fileID: 0}
@@ -903,7 +907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: m_LocalPosition.y
@@ -911,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: m_LocalRotation.w
