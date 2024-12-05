@@ -94,6 +94,11 @@ public class AIController : MonoBehaviour
             // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             // Destroy(projectileGO, 3f);
+            ZombieAnimController animController = GetComponent<ZombieAnimController>();
+            if (animController != null)
+            {
+                animController.TriggerAttackAnimation();
+            }
             PlayerStatus playerStatus = player.GetComponent<PlayerStatus>();
             if (playerStatus != null)
             {

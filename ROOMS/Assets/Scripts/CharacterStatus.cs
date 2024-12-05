@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterStatus : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class CharacterStatus : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(3);
     }
 
     private void SetHealthTo(int healthToSetTo)

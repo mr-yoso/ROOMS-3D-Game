@@ -19,4 +19,9 @@ public class ZombieAnimController : MonoBehaviour
     {
         animator.SetFloat("ZombieSpeed", navAgent.speed);
     }
+
+     public void TriggerAttackAnimation()
+    {
+        animator.SetTrigger("ZombieAttack");
+    }
 }

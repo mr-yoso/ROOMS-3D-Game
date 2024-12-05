@@ -1230,6 +1230,38 @@ Transform:
   - {fileID: 2631092059142442256}
   m_Father: {fileID: 388982422161826888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5110555907783635448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722933531884782835}
+  m_Layer: 0
+  m_Name: mixamorig5:RightHandMiddle1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722933531884782835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5110555907783635448}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.014964861, y: -0.003911199, z: 0.056351885, w: 0.9982912}
+  m_LocalPosition: {x: -0.011434262, y: 0.101464614, z: -0.0030966955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7962843083964391207}
+  m_Father: {fileID: 263138751023567407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5199672124278603881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,12 +1468,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1369400940246540825}
-  - component: {fileID: 3646824479121587793}
-  - component: {fileID: 6886063299716492311}
-  - component: {fileID: 199998814321402083}
-  - component: {fileID: 8457429245998648767}
-  - component: {fileID: 3927468853613716822}
+  - component: {fileID: 1780009439091515313}
   - component: {fileID: 6013008226209618948}
   m_Layer: 0
   m_Name: Zombie
@@ -1466,6 +1493,29 @@ Transform:
   - {fileID: 4328709173110928362}
   m_Father: {fileID: 7962843083964391207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6013008226209618948
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751466226560646325}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &6068984303745115901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +2010,7 @@ GameObject:
   - component: {fileID: 8937835232819933437}
   - component: {fileID: 2790481318319078689}
   - component: {fileID: 4824188022938943945}
-  - component: {fileID: 1447563821519822006}
+  - component: {fileID: -1261298234137396540}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -2079,8 +2129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a985b6342e7f4394f46aa6caa38b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6886063299716492311}
-  player: {fileID: 0}
+  agent: {fileID: 7637504755482136265}
+  player: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -2090,19 +2140,19 @@ MonoBehaviour:
   health: 120
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2.5
   projectile: {fileID: 924797098891081251, guid: fc68ff2084c11e347a7d8df5551a37c6, type: 3}
-  sightRange: 10
-  attackRange: 3
+  sightRange: 8
+  attackRange: 1.5
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!136 &6013008226209618948
+--- !u!136 &-1261298234137396540
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838261178445869176}
+  m_GameObject: {fileID: 7967145656953935902}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2119,38 +2169,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &5110555907783635448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1722933531884782835}
-  m_Layer: 0
-  m_Name: mixamorig5:RightHandMiddle1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1722933531884782835
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8020730111072946303}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.014964861, y: -0.003911199, z: 0.056351885, w: 0.9982912}
-  m_LocalPosition: {x: -0.011434262, y: 0.101464614, z: -0.0030966955}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7962843083964391207}
-  m_Father: {fileID: 263138751023567407}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8177134440761602918
 GameObject:
   m_ObjectHideFlags: 0
