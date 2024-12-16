@@ -27,6 +27,8 @@ public class AIController : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
     AudioManager audioManager;
 
+    public GameObject healthPickupPrefab;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -123,6 +125,12 @@ public class AIController : MonoBehaviour
 
     private void DestroyEnemy()
     {
+        float spawnChance = Random.value;
+        if (spawnChance <= 0.5f) // 20% chance
+        {
+            SpawnHealthPickup();
+        }
+
         if (ObjectiveManager.Instance != null)
         {
             ObjectiveManager.Instance.ZombieKilled();
@@ -133,6 +141,12 @@ public class AIController : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void SpawnHealthPickup()
+    {
+        Vector3 spawnPosition = transform.position + new Vector3(0, 1.0f, 0);
+        Instantiate(healthPickupPrefab, spawnPosition, Quaternion.identity);
     }
 
 
