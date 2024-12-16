@@ -57,6 +57,7 @@ public class CharacterStatus : MonoBehaviour
 
     public void Heal(int heal)
     {
+        Debug.Log("Healing by: " + heal);
         int healthAfterHeal = health + heal;
         SetHealthTo(healthAfterHeal);
     }

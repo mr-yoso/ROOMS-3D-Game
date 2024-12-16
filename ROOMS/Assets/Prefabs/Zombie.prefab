@@ -2145,6 +2145,7 @@ MonoBehaviour:
   attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
+  healthPickupPrefab: {fileID: 4641236726524370090, guid: 0c1456f5b1d803b4cae2ccc14a5ae618, type: 3}
 --- !u!136 &-1261298234137396540
 CapsuleCollider:
   m_ObjectHideFlags: 0
