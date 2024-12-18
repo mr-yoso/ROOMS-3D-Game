@@ -6,11 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player Movements")]
     public float moveSpeed;
-    float walkSpeed = 5f;
-    float runSpeed = 8f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 8f;
     public bool isRunning;
     public float jumpHeight = 3f;
     public CharacterController controller;
+
+    [Header("Speed Boost Variables")]
+    private bool isSpeedBoostActive = false;
+    private float speedMultiplier = 1f;
+    private PlayerHUD playerHUD;
 
 
     [Header("Gravity Variables")]
@@ -25,6 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         moveSpeed = walkSpeed;
+
+
+        playerHUD = FindObjectOfType<PlayerHUD>();
     }
 
     void Update()
@@ -43,7 +51,7 @@ public class PlayerController : MonoBehaviour
         isRunning = Input.GetKey(KeyCode.LeftShift);
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
         moveDirection = transform.TransformDirection(moveDirection);
-        moveSpeed = isRunning ? runSpeed : walkSpeed;
+        moveSpeed = isRunning ? runSpeed * speedMultiplier : walkSpeed * speedMultiplier;
 
         Vector3 movement = moveSpeed * Time.deltaTime * new Vector3(moveDirection.x, 0, moveDirection.z);
         controller.Move(movement);
@@ -69,5 +77,46 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(new Vector3(0, playerVelocity.y, 0) * Time.deltaTime);
+    }
+
+    // Speed Boost Methods
+    public void ApplySpeedBoost(float multiplier, float duration)
+    {
+        if (!isSpeedBoostActive) 
+        {
+            StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
+        }
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
+    {
+        isSpeedBoostActive = true;
+        speedMultiplier = multiplier;
+
+        // Notify the HUD
+        if (playerHUD != null)
+        {
+            playerHUD.ShowSpeedBoost(true);
+        }
+
+        Debug.Log("Speed Boost Activated!");
+
+        yield return new WaitForSeconds(duration);
+
+        RemoveSpeedBoost();
+    }
+
+    public void RemoveSpeedBoost()
+    {
+        speedMultiplier = 1f;
+        isSpeedBoostActive = false;
+
+        // Notify the HUD
+        if (playerHUD != null)
+        {
+            playerHUD.ShowSpeedBoost(false);
+        }
+
+        Debug.Log("Speed Boost Ended!");
     }
 }
