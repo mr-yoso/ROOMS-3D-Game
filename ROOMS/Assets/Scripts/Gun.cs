@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Add this to fix the error
 
 public class Gun : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     AudioManager audioManager;
 
+    private bool isDamageBoostActive = false; // Track if the damage boost is active
+    private float originalDamage;            // Store the original damage value
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        originalDamage = damage; // Store the original damage value
     }
 
     void Update()
@@ -67,5 +72,29 @@ public class Gun : MonoBehaviour
             //     enemy.TakeDamage(damage);
             // }
         }
+    }
+
+    public void ApplyDamageBoost(float multiplier, float duration)
+    {
+        if (!isDamageBoostActive)
+        {
+            StartCoroutine(DamageBoostCoroutine(multiplier, duration));
+        }
+    }
+
+    private IEnumerator DamageBoostCoroutine(float multiplier, float duration)
+    {
+        isDamageBoostActive = true;
+        damage *= multiplier; // Increase damage by multiplier
+
+        Debug.Log($"Damage Boost Activated! New Damage: {damage}");
+
+        yield return new WaitForSeconds(duration);
+
+        // Reset damage to original value
+        damage = originalDamage;
+        isDamageBoostActive = false;
+
+        Debug.Log("Damage Boost Ended!");
     }
 }
