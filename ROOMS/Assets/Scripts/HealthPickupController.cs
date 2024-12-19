@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthPickupController : MonoBehaviour
 {
     [SerializeField] private int healAmount = 10;
+    [SerializeField] private AudioClip pickupSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,12 @@ public class HealthPickupController : MonoBehaviour
             {
                 playerStatus.Heal(healAmount);
                 Destroy(gameObject);
+            }
+
+            AudioManager audioManager = FindObjectOfType<AudioManager>();
+            if (audioManager != null && pickupSound != null)
+            {
+                audioManager.PlaySFX(pickupSound);
             }
         }
     }

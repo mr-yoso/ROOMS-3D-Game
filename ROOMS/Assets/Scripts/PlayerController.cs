@@ -14,8 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Speed Boost Variables")]
     private bool isSpeedBoostActive = false;
-    private float speedMultiplier = 1f;
-    private PlayerHUD playerHUD;
+    private float speedMultiplier = 1f; 
 
 
     [Header("Gravity Variables")]
@@ -30,9 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         moveSpeed = walkSpeed;
-
-
-        playerHUD = FindObjectOfType<PlayerHUD>();
     }
 
     void Update()
@@ -91,13 +87,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
     {
         isSpeedBoostActive = true;
-        speedMultiplier = multiplier;
-
-        // Notify the HUD
-        if (playerHUD != null)
-        {
-            playerHUD.ShowSpeedBoost(true);
-        }
+        speedMultiplier = multiplier; 
 
         Debug.Log("Speed Boost Activated!");
 
@@ -108,14 +98,8 @@ public class PlayerController : MonoBehaviour
 
     public void RemoveSpeedBoost()
     {
-        speedMultiplier = 1f;
+        speedMultiplier = 1f; 
         isSpeedBoostActive = false;
-
-        // Notify the HUD
-        if (playerHUD != null)
-        {
-            playerHUD.ShowSpeedBoost(false);
-        }
 
         Debug.Log("Speed Boost Ended!");
     }

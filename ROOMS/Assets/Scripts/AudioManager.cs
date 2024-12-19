@@ -13,8 +13,9 @@ public class AudioManager : MonoBehaviour
    public AudioClip grunt;
    public AudioClip attack;
    public AudioClip gunshot;
+   public AudioClip munch;
 
-   private void Start()
+    private void Start()
    {
     musicSource.clip = background;
     musicSource.Play();
