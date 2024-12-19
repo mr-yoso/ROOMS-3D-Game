@@ -113,7 +113,7 @@ public class AIController : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         health -= damage;
 
@@ -126,7 +126,7 @@ public class AIController : MonoBehaviour
     private void DestroyEnemy()
     {
         float spawnChance = Random.value;
-        if (spawnChance <= 0.5f) // 20% chance
+        if (spawnChance <= 0.2f) // 20% chance
         {
             SpawnHealthPickup();
         }
