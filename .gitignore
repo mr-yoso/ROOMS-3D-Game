@@ -59,6 +59,7 @@
 /ROOMS/*.apk
 /ROOMS/*.aab
 /ROOMS/*.unitypackage
+/ROOMS/*.unitypackage.meta
 /ROOMS/*.app
 
 # Crashlytics generated file

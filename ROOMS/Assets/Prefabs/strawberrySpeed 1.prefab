@@ -118,6 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e19ce90bfea7e419c961082b728ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 2
+  speedMultiplier: 1.5
   duration: 5
   pickupSound: {fileID: 8300000, guid: f1d1165957be55e4aadae16350d52a8f, type: 3}

@@ -1,6 +1,8 @@
 using UnityEngine;
-using System.Collections; // Add this to fix the error
+using System.Collections;
 using TMPro;
+using System;
+using Unity.VisualScripting;
 
 public class Gun : MonoBehaviour
 {
@@ -8,11 +10,17 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float fireRate = 7f;
 
+    public int maxAmmo = 10;
+    private int currentAmmo;
+    public float reloadTime = 1f;
+    private bool isReloading = false;
+
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public GameObject impactEffectBlood;
 
+    public AudioClip gunshotSound; // Unique gunshot sound for this weapon
 
     private float nextTimeToFire = 0f;
     AudioManager audioManager;
@@ -20,8 +28,11 @@ public class Gun : MonoBehaviour
     private bool isDamageBoostActive = false; // Track if the damage boost is active
     private float originalDamage;            // Store the original damage value
 
+    public Animator gunAnimator;
+
     [Header("UI Elements")]
     public TextMeshProUGUI powerStatusText; // Reference to the power-up status text for 
+    public TextMeshProUGUI ammoText;
 
     private void Awake()
     {
@@ -35,19 +46,80 @@ public class Gun : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
+    }
+
+    public void UpdateAmmoUI()
+    {
+        if (ammoText != null)
+        {
+            ammoText.text = $"{currentAmmo:000}";
+        }
+    }
+
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (isReloading)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
     }
 
+    void OnEnable()
+    {
+        isReloading = false;
+        gunAnimator.SetBool("Reloading", false);
+
+        UpdateAmmoUI();
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+
+        gunAnimator.SetBool("Reloading", true);
+        yield return new WaitForSeconds(reloadTime - .25f);
+
+        gunAnimator.SetBool("Reloading", false);
+        yield return new WaitForSeconds(.25f);
+
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
+        
+        isReloading = false;
+    }
+
     void Shoot()
     {
         muzzleFlash.Play();
-        audioManager.PlaySFX(audioManager.gunshot);
+        if (gunshotSound != null)
+        {
+            audioManager.PlaySFX(gunshotSound);
+        }
+
+        currentAmmo--;
+        UpdateAmmoUI();
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))

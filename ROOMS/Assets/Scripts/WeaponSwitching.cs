@@ -18,6 +18,13 @@ public class WeaponSwitching : MonoBehaviour
             if (i == selectedWeapon)
             {
                 weapon.gameObject.SetActive(true);
+
+                // Call UpdateAmmoUI on the enabled weapon
+                Gun gun = weapon.GetComponent<Gun>();
+                if (gun != null)
+                {
+                    gun.UpdateAmmoUI();
+                }
             }
             else
             {

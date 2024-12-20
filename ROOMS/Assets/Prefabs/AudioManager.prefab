@@ -181,7 +181,10 @@ MonoBehaviour:
   Lose: {fileID: 8300000, guid: f727d5096f14a4190bf458cd019384cf, type: 3}
   grunt: {fileID: 8300000, guid: 5edbf413725bb496dbcfbffd6e219f59, type: 3}
   attack: {fileID: 8300000, guid: a715ddf00ff7f24469c72404e8df85e9, type: 3}
-  gunshot: {fileID: 8300000, guid: 92d35fe1c59bbd14eaee9e3d3b54cea7, type: 3}
+  pistolGunshot: {fileID: 0}
+  rifleGunshot: {fileID: 0}
+  heavyGunshot: {fileID: 0}
+  munch: {fileID: 0}
 --- !u!1 &7237800916956012551
 GameObject:
   m_ObjectHideFlags: 0
