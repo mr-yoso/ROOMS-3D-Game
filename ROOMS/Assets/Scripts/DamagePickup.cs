@@ -15,6 +15,15 @@ public class DamagePickup : MonoBehaviour
             if (gun != null)
             {
                 gun.ApplyDamageBoost(damageMultiplier, duration);
+
+                PowerHUD powerHUD = FindObjectOfType<PowerHUD>();
+                if (powerHUD != null)
+                {
+                    powerHUD.ShowPowerStatus("Damage", true);
+
+                    // Hide the power status after the boost ends
+                    Invoke(nameof(HidePowerStatus), duration);
+                }
             }
 
             // Optional: Play sound effect
@@ -26,6 +35,15 @@ public class DamagePickup : MonoBehaviour
 
             // Destroy the power-up object
             Destroy(gameObject);
+        }
+    }
+
+    private void HidePowerStatus()
+    {
+        PowerHUD powerHUD = FindObjectOfType<PowerHUD>();
+        if (powerHUD != null)
+        {
+            powerHUD.ShowPowerStatus("Damage", false);
         }
     }
 }

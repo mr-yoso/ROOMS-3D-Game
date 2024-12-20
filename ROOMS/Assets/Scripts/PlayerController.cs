@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,10 +26,19 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     private Vector3 playerVelocity = Vector3.zero;
 
+    [Header("UI Elements")]
+    public TextMeshProUGUI powerStatusText; // Reference to the power-up status text
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         moveSpeed = walkSpeed;
+
+        // Initialize the power-up text to be empty
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "";
+        }
     }
 
     void Update()
@@ -87,7 +97,13 @@ public class PlayerController : MonoBehaviour
     private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
     {
         isSpeedBoostActive = true;
-        speedMultiplier = multiplier; 
+        speedMultiplier = multiplier;
+
+        // Update the UI text to show the speed boost is active
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "Speed Boost Active!";
+        }
 
         Debug.Log("Speed Boost Activated!");
 
@@ -100,6 +116,12 @@ public class PlayerController : MonoBehaviour
     {
         speedMultiplier = 1f; 
         isSpeedBoostActive = false;
+
+        // Reset the UI text
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "";
+        }
 
         Debug.Log("Speed Boost Ended!");
     }

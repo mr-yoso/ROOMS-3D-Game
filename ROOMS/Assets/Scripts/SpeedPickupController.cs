@@ -14,6 +14,16 @@ public class SpeedPickup : MonoBehaviour
             if (playerController != null)
             {
                 playerController.ApplySpeedBoost(speedMultiplier, duration);
+
+                // Update the PowerHUD to show the speed boost
+                PowerHUD powerHUD = FindObjectOfType<PowerHUD>();
+                if (powerHUD != null)
+                {
+                    powerHUD.ShowPowerStatus("Speed", true);
+
+                    // Hide the power status after the boost ends
+                    Invoke(nameof(HidePowerStatus), duration);
+                }
             }
 
             // Play the pickup sound using AudioManager
@@ -25,6 +35,15 @@ public class SpeedPickup : MonoBehaviour
 
             // Destroy the speed pickup
             Destroy(gameObject);
+        }
+    }
+
+    private void HidePowerStatus()
+    {
+        PowerHUD powerHUD = FindObjectOfType<PowerHUD>();
+        if (powerHUD != null)
+        {
+            powerHUD.ShowPowerStatus("Speed", false);
         }
     }
 }

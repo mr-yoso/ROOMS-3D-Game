@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections; // Add this to fix the error
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -19,10 +20,19 @@ public class Gun : MonoBehaviour
     private bool isDamageBoostActive = false; // Track if the damage boost is active
     private float originalDamage;            // Store the original damage value
 
+    [Header("UI Elements")]
+    public TextMeshProUGUI powerStatusText; // Reference to the power-up status text for 
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         originalDamage = damage; // Store the original damage value
+
+        // Initialize the power-up text to be empty
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "";
+        }
     }
 
     void Update()
@@ -87,6 +97,12 @@ public class Gun : MonoBehaviour
         isDamageBoostActive = true;
         damage *= multiplier; // Increase damage by multiplier
 
+        // Update the UI text to show the damage boost is active
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "Damage Boost Active!";
+        }
+
         Debug.Log($"Damage Boost Activated! New Damage: {damage}");
 
         yield return new WaitForSeconds(duration);
@@ -94,6 +110,12 @@ public class Gun : MonoBehaviour
         // Reset damage to original value
         damage = originalDamage;
         isDamageBoostActive = false;
+
+        // Reset the UI text
+        if (powerStatusText != null)
+        {
+            powerStatusText.text = "";
+        }
 
         Debug.Log("Damage Boost Ended!");
     }
