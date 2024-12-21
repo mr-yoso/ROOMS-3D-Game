@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BossScene.unity
     guid: 49cff4ee0c75eb747b94845fb1f7e1ed
   - enabled: 1
+    path: Assets/Scenes/WinMenu.unity
+    guid: ddb3b36afd10f6c4398e176558ac691b
+  - enabled: 1
     path: Assets/Scenes/LoseMenu.unity
     guid: ec05bcf47d045a841bf47d696cd408bb
   m_configObjects: {}
