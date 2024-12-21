@@ -42,7 +42,7 @@ public class Level2GameManager : MonoBehaviour
         if (getGoblet)
         {
             StartCoroutine(SpawnWaves());
-            StartCoroutine(StartTimer(10));
+            StartCoroutine(StartTimer(180));
             GameObject.FindGameObjectWithTag("MainRoom").SetActive(false);
             //Debug.Log("YOU ARE IN MAIN ROOM");
         }
