@@ -25,6 +25,12 @@ public class LevelOneManager : MonoBehaviour
     private void Start()
     {
         ResetObjectives();
+        CheckCursorState();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        CheckCursorState();
     }
 
     private void ResetObjectives()
@@ -47,8 +53,22 @@ public class LevelOneManager : MonoBehaviour
 
     private void LoadNextScene()
     {
-        // Cursor.lockState = CursorLockMode.None;
-        // Cursor.visible = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void CheckCursorState()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "WinMenu" || currentSceneName == "LoseMenu")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

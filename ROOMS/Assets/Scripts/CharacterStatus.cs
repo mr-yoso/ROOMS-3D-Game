@@ -39,7 +39,7 @@ public class CharacterStatus : MonoBehaviour
         isDead = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("LoseMenu");
     }
 
     private void SetHealthTo(int healthToSetTo)
