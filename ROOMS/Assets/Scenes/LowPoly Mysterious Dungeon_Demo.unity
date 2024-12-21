@@ -38244,6 +38244,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 444773459d79aef42acbb5ad604c78e9, type: 3}
+--- !u!114 &996813355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3718965835682525187, guid: 444773459d79aef42acbb5ad604c78e9, type: 3}
+  m_PrefabInstance: {fileID: 996813354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &996813356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 361469294675006708, guid: 444773459d79aef42acbb5ad604c78e9, type: 3}
+  m_PrefabInstance: {fileID: 996813354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1000487170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41060,10 +41082,22 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1604364717}
+    - target: {fileID: 772218169467952131, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
+      propertyPath: powerStatusText
+      value: 
+      objectReference: {fileID: 996813355}
+    - target: {fileID: 1253742893346949109, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
+      propertyPath: powerStatusText
+      value: 
+      objectReference: {fileID: 996813356}
     - target: {fileID: 2794368883718936053, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1604364717}
+    - target: {fileID: 2794368883718936053, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
+      propertyPath: powerStatusText
+      value: 
+      objectReference: {fileID: 996813355}
     - target: {fileID: 5336828935737778759, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.387
@@ -41116,6 +41150,10 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1604364717}
+    - target: {fileID: 6096194835490333474, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
+      propertyPath: powerStatusText
+      value: 
+      objectReference: {fileID: 996813355}
     - target: {fileID: 7496330149794922582, guid: a2ee1a030d76a484ebabe6c03b756732, type: 3}
       propertyPath: maxHealthText
       value: 
@@ -83877,6 +83915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af2a81fc8b6c53438b129871bf0fbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayBeforeTransition: 2
   objectiveText: {fileID: 219031830}
   getGoblet: 0
   enemy: {fileID: 5115315567666410488, guid: e0f21260170c41641bb2664a1fc9b15b, type: 3}
