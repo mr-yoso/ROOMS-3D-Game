@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LowPoly Mysterious Dungeon_Demo.unity
     guid: 12b861b325070f54d888b05efb198f9d
   - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: 49cff4ee0c75eb747b94845fb1f7e1ed
+  - enabled: 1
     path: Assets/Scenes/LoseMenu.unity
     guid: ec05bcf47d045a841bf47d696cd408bb
   m_configObjects: {}

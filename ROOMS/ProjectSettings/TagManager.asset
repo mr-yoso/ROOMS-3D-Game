@@ -8,6 +8,7 @@ TagManager:
   - plane
   - Enemy
   - AudioManager
+  - MainRoom
   layers:
   - Default
   - TransparentFX

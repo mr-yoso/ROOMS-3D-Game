@@ -125,4 +125,13 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Speed Boost Ended!");
     }
+
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MainRoom"))
+        {
+            Level2GameManager.Instance.TriggerWaves();
+        }
+    }
 }

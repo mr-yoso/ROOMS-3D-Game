@@ -6,7 +6,7 @@ public class LevelOneManager : MonoBehaviour
     public static LevelOneManager Instance { get; private set; } // Singleton instance
 
     [Header("Scene Transition")]
-    public string nextSceneName = "MainMenu"; // Name of the next scene
+    public string nextSceneName = "LowPoly Mysterious Dungeon_Demo"; // Name of the next scene
     public float delayBeforeTransition = 2f; // Delay before transitioning
 
     private void Awake()
@@ -47,8 +47,8 @@ public class LevelOneManager : MonoBehaviour
 
     private void LoadNextScene()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        SceneManager.LoadScene(nextSceneName);
+        // Cursor.lockState = CursorLockMode.None;
+        // Cursor.visible = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
